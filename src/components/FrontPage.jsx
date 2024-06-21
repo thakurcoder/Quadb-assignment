@@ -1,5 +1,6 @@
 import React from 'react'
 import Show from './Show'
+import Shimmer from './Shimmer';
 import { useState,useEffect } from 'react';
 
 
@@ -18,7 +19,7 @@ function FrontPage() {
         fetchdata();
     },[])
 
-    if (!data) return <h1>loading...</h1>
+    if (!data) return <Shimmer /> 
 
   return (
     <div>
